@@ -1,18 +1,1 @@
-# Using Flask as an example
-from flask import Flask, render_template
 
-app = Flask(__name__)
-
-# Example game data
-games = [
-    {"id": 1, "name": "Space Invaders", "genre": "Arcade", "description": "Classic arcade shooter."},
-    {"id": 2, "name": "Mystic Quest", "genre": "RPG", "description": "An epic role-playing adventure."},
-    {"id": 3, "name": "Fast Racers", "genre": "Racing", "description": "High-speed racing action."},
-]
-
-@app.route('/')
-def game_list():
-    return render_template('games.html', games=games)
-
-if __name__ == '__main__':
-    app.run(debug=True)
